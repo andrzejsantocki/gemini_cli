@@ -12,8 +12,8 @@ class AppSettings(BaseSettings):
 
     gemini_api_key:SecretStr = Field(..., alias = 'GEMINI_API_KEY') # alias is requred for BaseSettings to locate &validate var
     heavy_model: str = Field("gemini-2.5-flash")
-    light_model: str = Field("gemini-2.5-flash")
-    
+    light_model: str = Field("gemini-1.5-pro-002")
+
     model_config = SettingsConfigDict(
         env_file = '.env',
         extra = 'ignore'
